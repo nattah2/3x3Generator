@@ -1,0 +1,9 @@
+{
+    "name"    : "Acheron",
+    "path"    : "Nihility",
+    "gender"  : "Female",
+    "faction" : "",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

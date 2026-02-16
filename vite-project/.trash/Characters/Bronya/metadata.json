@@ -1,0 +1,9 @@
+{
+    "name"    : "Bronya",
+    "path"    : "Harmony",
+    "gender"  : "Female",
+    "faction" : "Belebog",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

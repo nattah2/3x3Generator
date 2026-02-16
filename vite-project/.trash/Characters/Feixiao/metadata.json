@@ -1,0 +1,9 @@
+{
+    "name"    : "Feixiao",
+    "path"    : "Hunt",
+    "gender"  : "Female",
+    "faction" : "Xianzhou",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

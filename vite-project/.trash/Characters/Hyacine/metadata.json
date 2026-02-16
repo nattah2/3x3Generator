@@ -1,0 +1,9 @@
+{
+    "name"    : "Hyacine",
+    "path"    : "Rememberance",
+    "gender"  : "Female",
+    "faction" : "Day Demigod",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

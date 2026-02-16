@@ -1,0 +1,9 @@
+{
+    "name"    : "Gallagher",
+    "path"    : "Abundance",
+    "gender"  : "Male",
+    "faction" : "Penacony",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

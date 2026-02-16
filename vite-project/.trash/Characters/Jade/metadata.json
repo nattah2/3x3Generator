@@ -1,0 +1,9 @@
+{
+    "name"    : "Jade",
+    "path"    : "Erudition",
+    "gender"  : "Female",
+    "faction" : "IPC",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

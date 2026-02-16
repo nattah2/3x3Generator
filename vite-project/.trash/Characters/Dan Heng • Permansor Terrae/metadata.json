@@ -1,0 +1,9 @@
+{
+    "name"    : "Dan Heng • Permansor Terrae",
+    "path"    : "Preservation",
+    "gender"  : "Male",
+    "faction" : "Night Demigod",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

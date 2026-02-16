@@ -1,0 +1,9 @@
+{
+    "name"    : "Blade",
+    "path"    : "Destruction",
+    "gender"  : "Male",
+    "faction" : "Stellaron Hunters",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

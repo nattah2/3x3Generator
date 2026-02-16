@@ -1,0 +1,9 @@
+{
+    "name"    : "Moze",
+    "path"    : "Hunt",
+    "gender"  : "Male",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

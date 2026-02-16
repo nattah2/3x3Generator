@@ -1,0 +1,9 @@
+{
+    "name"    : "March 7th (Preservation) Nascent Spring",
+    "path"    : "March 7th (Preservation) Nascent Spring",
+    "gender"  : "@gender",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

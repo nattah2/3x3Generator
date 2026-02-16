@@ -1,0 +1,9 @@
+{
+    "name"    : "Sushang",
+    "path"    : "Female",
+    "gender"  : "Female",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

@@ -1,0 +1,52 @@
+#+title: Main
+
+
+#+begin_src 
+
+
+/**
+ * */
+/**
+    console.log("---First");
+    console.log(typeof(characterList));
+    // for (const image in image_list) {
+    //     console.log(image.value);
+    // }
+    // console.log("---Second");
+    // console.log(metadata_list);
+    // let metadata_list2 = JSON.parse(JSON.stringify(metadata_list));
+    // metadata_list2.forEach(function (element) {
+    //     element.rating = 1000;
+    // }
+    // );
+    // let randomA = image_list[Math.floor(Math.random() * image_list.length)];
+    // let randomB = image_list[Math.floor(Math.random() * image_list.length)];
+    // for (const item of metadata_list2) {
+    //     console.log(item);
+    // }
+ */
+
+    // return [
+    //     `./src/Characters/${randomA}/${characterList[randomA].images[0].file}`,
+    //     `./src/Characters/${randomB}/${characterList[randomB].images[0].file}`,
+    // ]
+
+    // return [path.join("./src/character", characterList[randomA].images[0]),
+            // path.join("./src/character", characterList[randomB].images[0])];
+
+
+// function probability_elo(rating1: number, rating2: number): number {
+//     return 1 / (1 + Math.pow(10, (rating1 - rating2) / 400));
+// };
+
+// function elo(characterA: character,
+//              characterB: character,
+//              winner: character = characterA): [number, number] {
+//     // TODO Optimize this
+//     let probability_a = probability(characterA.elo, characterB.elo);
+//     let probability_b = probability(characterB.elo, characterA.elo);
+//     modifier = (winner == characterA) ? 1 : 0; 
+//     console.log(probability_a);
+//     console.log(probability_b);
+// };
+#+end_src

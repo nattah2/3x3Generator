@@ -1,0 +1,9 @@
+{
+    "name"    : "@name",
+    "path"    : "@path",
+    "gender"  : "@gender",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "@image", "type": "default" }
+    ]
+}

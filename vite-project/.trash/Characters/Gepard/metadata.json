@@ -1,0 +1,9 @@
+{
+    "name"    : "Gepard",
+    "path"    : "Preservation",
+    "gender"  : "Male",
+    "faction" : "Belebog",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

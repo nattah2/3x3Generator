@@ -1,0 +1,9 @@
+{
+    "name"    : "Asta",
+    "path"    : "Harmony",
+    "gender"  : "Female",
+    "faction" : "Herta's Space Station",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

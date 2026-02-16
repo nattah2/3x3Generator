@@ -1,0 +1,9 @@
+{
+    "name"    : "Trailblazer (M) Harmony",
+    "path"    : "Harmony",
+    "gender"  : "Male",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

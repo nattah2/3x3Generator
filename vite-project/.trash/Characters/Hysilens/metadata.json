@@ -1,0 +1,9 @@
+{
+    "name"    : "Hysilens",
+    "path"    : "Nihility",
+    "gender"  : "Female",
+    "faction" : "Night Demigod",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

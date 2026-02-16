@@ -1,0 +1,9 @@
+{
+    "name"    : "The Herta",
+    "path"    : "Erudition",
+    "gender"  : "Female",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

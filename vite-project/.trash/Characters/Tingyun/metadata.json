@@ -1,0 +1,9 @@
+{
+    "name"    : "Tingyun",
+    "path"    : "Harmony",
+    "gender"  : "Female",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

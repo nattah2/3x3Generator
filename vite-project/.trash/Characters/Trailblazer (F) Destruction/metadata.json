@@ -1,0 +1,9 @@
+{
+    "name"    : "Trailblazer (F) Destruction",
+    "path"    : "Trailblazer (F) Destruction",
+    "gender"  : "Destruction",
+    "faction" : "Female",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

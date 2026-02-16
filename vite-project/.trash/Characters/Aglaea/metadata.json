@@ -1,0 +1,9 @@
+{
+    "name"    : "Aglaea",
+    "path"    : "Rememberance",
+    "gender"  : "Female",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

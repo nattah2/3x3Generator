@@ -1,0 +1,9 @@
+{
+    "name"    : "Lynx",
+    "path"    : "Abundance",
+    "gender"  : "Female",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

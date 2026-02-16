@@ -1,0 +1,9 @@
+{
+    "name"    : "Sparkle",
+    "path"    : "Harmony",
+    "gender"  : "Female",
+    "faction" : "@faction",
+    "images"  : [
+        { "file": "splash.png", "type": "default" }
+    ]
+}

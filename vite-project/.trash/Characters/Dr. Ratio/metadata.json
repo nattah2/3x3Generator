@@ -1,0 +1,9 @@
+{
+    "name"    : "Dr. Ratio",
+    "path"    : "Hunt",
+    "gender"  : "Male",
+    "faction" : "Intelligentsia Guild",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}

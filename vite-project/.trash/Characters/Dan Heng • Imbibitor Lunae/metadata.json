@@ -1,0 +1,9 @@
+{
+    "name"    : "Dan Heng • Imbibitor Lunae",
+    "path"    : "Destruction",
+    "gender"  : "Male",
+    "faction" : "Xianzhou",
+    "images"  : [
+        { "file": "splash.webp", "type": "default" }
+    ]
+}
