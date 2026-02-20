@@ -1,13 +1,13 @@
-.grid {
+#grid {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: pink;
+  background-color: gold;
   padding: 10px;
   width: 600px;  /* Fixed width */
   height: 600px; /* Fixed height */
 }
-.grid div {
+#grid div {
   background-color: #f1f1f1;
   border: 1px solid black;
   text-align: center;
@@ -15,6 +15,10 @@
   /* padding: 5px; */
   /* background-image: url("sample.jpeg"); */
   /* background-size: cover; */
+}
+
+body {
+    margin: 0px;
 }
 
 .album {
@@ -33,8 +37,212 @@
     padding: 3px;
     margin:  3px;
     background-color: red;
+
 }
 
 .list-item:hover {
     background-color: pink;
 }
+
+/* .gridElement { */
+/*   position: relative; */
+/*   overflow: hidden; */
+/*   background: #1a1a1a;       /\* dark for album covers – adjust to your design *\/ */
+/*   border-radius: 12px;       /\* softer modern look *\/ */
+/*   transition: transform 0.18s ease, box-shadow 0.18s ease; */
+/* } */
+
+/* .gridElement:hover { */
+/*   transform: translateY(-4px) scale(1.03); */
+/*   box-shadow: 0 12px 32px rgba(0,0,0,0.4); */
+/* } */
+
+/* Subtle always-visible corner buttons */
+.btn-close,
+.btn-play {
+  position: absolute;
+  margin:  3px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: rgba(40, 40, 40, 0.35);   /* very faint dark tint */
+  backdrop-filter: blur(4px);           /* glass-like if browser supports */
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0.45;                        /* low visibility by default */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.btn-close {
+    margin-left: 30px;
+}
+
+/* .btn-play { */
+/*   right: 20px;   /\* 12px + 28px + 8px gap *\/ */
+/* } */
+
+.gridElement:hover .btn-close,
+.gridElement:hover .btn-play {
+  opacity: 0.9;
+  background: rgba(40, 40, 40, 0.75);   /* stronger on grid hover */
+}
+
+/* Extra feedback when hovering the button itself */
+.btn-close:hover,
+.btn-play:hover {
+  opacity: 1;
+  transform: scale(1.14);
+  background: rgba(60, 60, 60, 0.95);   /* almost solid on direct hover */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Optional: different color for play button */
+.btn-play {
+  color: red;
+  /* You can make it slightly green/teal by default if you want distinction */
+  /* background: rgba(0, 180, 120, 0.25); */ 
+}
+
+/* Hide play button when there's no media (optional) */
+.gridElement:not(:has(img.album)) .btn-close, .btn-play {
+  display: none;
+}
+
+img.album {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  background-color: pink;
+  padding: 20px;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  display: none;
+}
+
+.left-hand-side {
+    padding: 10px;
+    background-color: gray;
+}
+
+.right-hand-side {
+    padding: 10px;
+    background-color: steelblue;
+}
+
+/* 1. The Overlay: Darkens the background and centers the modal */
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Hidden by default - toggle this with JS or a class */
+  visibility: hidden; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#albumModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: none; /* Controlled by JS */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 2. The Modal Content (The white box inside) */
+#albumModal .modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative; /* So the close 'X' can be absolute inside it */
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+/* The Backdrop */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Changed to flex in JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* The Box */
+.modal-container {
+    background: #fff;
+    width: 90%;
+    max-width: 800px; /* Wider for 2-column */
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* The Grid Layout */
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Left side 1 part, right side 1.2 parts */
+}
+
+/* Left Side: Art Preview */
+.modal-preview {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #eee;
+}
+
+.modal-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image square and filled */
+}
+
+/* Right Side: Form Padding */
+.modal-form-side {
+    padding: 2rem;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Form Styling */
+.modal-form-side label { display: block; font-weight: bold; margin-top: 10px; font-size: 0.85rem; }
+.modal-form-side input, .modal-form-side textarea { width: 100%; padding: 8px; margin-top: 4px; }
+.time-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.modal-close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 24px; z-index: 10; }

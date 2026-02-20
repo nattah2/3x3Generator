@@ -1,10 +1,28 @@
 import Sortable from 'sortablejs';
 import { createIcons, icons } from 'lucide';
-import { initAlbumForm } from './components/albumForm';
-import { initAlbumGrid } from './components/albumGrid';
-import { initAlbumSidebar } from './components/albumSidebar';
-import { initAlbumModal, showModal } from './components/albumModal';
-// import { loadAlbums } from './db';
+
+interface Album {
+    albumImage: HTMLImageElement | null;
+    audioFile: File | null;
+    startTime: number;
+    endTime: number;
+    artist: string;
+    albumName: string;
+    songName: string;
+    description: string;
+    tags: string[];
+}
+
+const albums: Album[] = [];
+
+function loadImageFromFile(file: File): Promise<HTMLImageElement> {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => reject(new Error(`Failed to load image: ${file.name}`));
+        img.src = URL.createObjectURL(file);
+    });
+}
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
@@ -128,7 +146,7 @@ app.innerHTML = `
         <p>Album List: </p>
         <ul id="album-list">
         </ul>
-        <button id="edit">edit</button>
+        <button>Edit</button>
     </div>
 </div>
 `;
@@ -150,22 +168,117 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    const edit = document.getElementById('edit');
-    edit.addEventListener('click', () => {
-        showModal(0);
-    }) 
-    
-
-    const videoButton = document.getElementById('renderVideo');
-    videoButton.addEventListener('click', () => {
-        alert('yep... das me');
-    }) 
-    
-    createIcons({ icons });
-
-    initAlbumForm();
-    initAlbumGrid();
-    initAlbumSidebar();
-    initAlbumModal();
+    createIcons({icons});
+    createModal();
 });
 
+document.querySelector<HTMLFormElement>('#albumForm')!.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const albumArtFile = (document.getElementById('albumArtInput') as HTMLInputElement).files?.[0] ?? null;
+    const audioFile = (document.getElementById('audioFileInput') as HTMLInputElement).files?.[0] ?? null;
+    const artist = (document.getElementById('artistInput') as HTMLInputElement).value.trim();
+    const albumName = (document.getElementById('albumNameInput') as HTMLInputElement).value.trim();
+    const songName = (document.getElementById('songNameInput') as HTMLInputElement).value.trim();
+
+    let albumImage: HTMLImageElement | null = null;
+
+    if (albumArtFile) {
+        try {
+            albumImage = await loadImageFromFile(albumArtFile);
+            console.log(`Album art loaded: ${albumArtFile.name}`);
+        } catch (err) {
+            console.error("Could not load album art:", err);
+            alert("Failed to load the album artwork. Using without cover.");
+        }
+    }
+
+    const newAlbum: Album = {
+        albumImage,
+        audioFile,
+        startTime: 0,
+        endTime: 0,
+        artist: artist || "Unknown Artist",
+        albumName: albumName || "Unknown Album",
+        songName: songName || "Untitled",
+        description: '',
+        tags: [],
+    };
+
+    albums.push(newAlbum);
+    console.log('Album added:', newAlbum);
+    console.log('Total albums:', albums.length);
+
+    addAlbumToSidebar(newAlbum);
+
+    (e.target as HTMLFormElement).reset();
+});
+
+function addAlbumToSidebar(album: Album): void {
+    const albumListElement = document.getElementById("album-list");
+    
+    if (!albumListElement) {
+        console.error("Album list element not found");
+        return;
+    }
+
+    const newItem = document.createElement("li");
+    newItem.classList.add("list-item");
+    newItem.textContent = `${album.artist} - ${album.albumName}`;
+    newItem.draggable = true; 
+    
+    newItem.addEventListener('dragstart', (e) => {
+        const albumIndex = albums.indexOf(album);
+        e.dataTransfer!.setData('albumIndex', albumIndex.toString());
+    });
+    
+    albumListElement.appendChild(newItem);
+}
+
+const gridList = document.querySelectorAll('.gridElement');
+
+gridList.forEach(function(element) {
+    element.addEventListener('dragover', (e) => {
+        e.preventDefault(); // Required to allow drop
+    });
+
+    element.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const albumIndex = parseInt(e.dataTransfer!.getData('albumIndex'));
+        const album = albums[albumIndex];
+        const targetSlot = e.target; 
+
+        const existingImg = targetSlot.querySelector('img.album');
+        if (existingImg) {
+            existingImg.remove();
+        }
+
+        // targetSlot.innerHTML = `<img src="${album.albumImage.src}" class="album">`;
+        const img = document.createElement('img');
+        img.src = album.albumImage!.src;
+        img.className = 'album';
+        targetSlot.appendChild(img);
+    });
+})
+
+const closeButtonList = document.querySelectorAll('.btn-close');
+
+closeButtonList.forEach(function(element) {
+    element.addEventListener('click', (e) => {
+        console.log(element);
+        const parent = element.parentElement;
+        if (!parent) {return};
+        const img = parent.querySelector(".album");
+        if (img) {
+            img.remove();
+        }
+    });
+})
+
+function createModal() {
+    const modal = document.createElement('div');
+    modal.classList.add("modal");
+    const modalContent = document.createElement('div');
+    const main_container = document.body.getElementsByClassName("main-container");
+    main_container[0].appendChild(modal);
+}
