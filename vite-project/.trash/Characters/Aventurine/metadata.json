@@ -1,9 +1,0 @@
-{
-    "name"    : "Aventurine",
-    "path"    : "Preservation",
-    "gender"  : "Male",
-    "faction" : "IPC",
-    "images"  : [
-        { "file": "splash.png", "type": "default" }
-    ]
-}

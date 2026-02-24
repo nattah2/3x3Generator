@@ -1,9 +1,0 @@
-{
-    "name"    : "Himeko",
-    "path"    : "Erudition",
-    "gender"  : "Female",
-    "faction" : "Astral Express",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

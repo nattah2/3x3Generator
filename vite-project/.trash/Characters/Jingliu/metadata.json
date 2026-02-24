@@ -1,9 +1,0 @@
-{
-    "name"    : "Jingliu",
-    "path"    : "Destruction",
-    "gender"  : "Female",
-    "faction" : "Xianzhou",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

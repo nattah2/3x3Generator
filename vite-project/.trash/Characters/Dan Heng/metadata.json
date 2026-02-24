@@ -1,9 +1,0 @@
-{
-    "name"    : "Dan Heng",
-    "path"    : "Hunt",
-    "gender"  : "Male",
-    "faction" : "Astral Express",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

@@ -1,9 +1,0 @@
-{
-    "name"    : "Firefly",
-    "path"    : "Destruction",
-    "gender"  : "Female",
-    "faction" : "Stellaron Hunters",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

@@ -1,9 +1,0 @@
-{
-    "name"    : "Trailblazer (M) Preservation",
-    "path"    : "Preservation",
-    "gender"  : "Male",
-    "faction" : "@faction",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

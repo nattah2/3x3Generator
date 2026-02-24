@@ -1,9 +1,0 @@
-{
-    "name"    : "March 7th (Preservation)",
-    "path"    : "Preservation",
-    "gender"  : "Female",
-    "faction" : "@faction",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

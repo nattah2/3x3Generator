@@ -1,9 +1,0 @@
-{
-    "name"    : "Castorice",
-    "path"    : "Rememberance",
-    "gender"  : "Female",
-    "faction" : "Night Demigod",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

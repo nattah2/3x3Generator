@@ -1,9 +1,0 @@
-{
-    "name"    : "Black Swan",
-    "path"    : "Nihility",
-    "gender"  : "Female",
-    "faction" : "Memokeepers",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

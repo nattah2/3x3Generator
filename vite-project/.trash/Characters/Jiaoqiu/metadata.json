@@ -1,9 +1,0 @@
-{
-    "name"    : "Jiaoqiu",
-    "path"    : "Nihility",
-    "gender"  : "Male",
-    "faction" : "Xianzhou",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

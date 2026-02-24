@@ -1,9 +1,0 @@
-{
-    "name"    : "Trailblazer (M) Destruction",
-    "path"    : "Destruction",
-    "gender"  : "Male",
-    "faction" : "@faction",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

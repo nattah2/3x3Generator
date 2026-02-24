@@ -1,9 +1,0 @@
-{
-    "name"    : "Hook",
-    "path"    : "Destruction",
-    "gender"  : "Female",
-    "faction" : "Belebog",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

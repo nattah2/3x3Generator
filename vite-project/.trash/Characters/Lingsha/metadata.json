@@ -1,9 +1,0 @@
-{
-    "name"    : "Lingsha",
-    "path"    : "Abundance",
-    "gender"  : "Female",
-    "faction" : "Xianzhou",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

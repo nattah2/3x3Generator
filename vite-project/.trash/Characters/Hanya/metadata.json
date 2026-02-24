@@ -1,9 +1,0 @@
-{
-    "name"    : "Hanya",
-    "path"    : "Harmony",
-    "gender"  : "Female",
-    "faction" : "Xianzhou",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

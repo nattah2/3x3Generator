@@ -1,9 +1,0 @@
-{
-    "name"    : "Silver Wolf",
-    "path"    : "Nihility",
-    "gender"  : "Female",
-    "faction" : "@faction",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}

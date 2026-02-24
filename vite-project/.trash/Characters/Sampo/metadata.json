@@ -1,9 +1,0 @@
-{
-    "name"    : "Sampo",
-    "path"    : "Nihility",
-    "gender"  : "Male",
-    "faction" : "@faction",
-    "images"  : [
-        { "file": "splash.webp", "type": "default" }
-    ]
-}
