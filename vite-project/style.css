@@ -78,7 +78,6 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
@@ -89,7 +88,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #747bff; /* fix this? */
   }
   button {
     background-color: #f9f9f9;
@@ -156,3 +155,5 @@ button:focus-visible {
   align-content: normal;
 }
 
+
+button:focus,

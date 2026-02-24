@@ -1,0 +1,3 @@
+.trash/
+*.log
+node_modules/

@@ -4,84 +4,126 @@ import { initAlbumForm } from './components/albumForm';
 import { initAlbumGrid } from './components/albumGrid';
 import { initAlbumSidebar } from './components/albumSidebar';
 import { initAlbumModal, showModal } from './components/albumModal';
+import { renderVideo } from './renderVideo';
 // import { loadAlbums } from './db';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
 <div class="main-container">
     <div class="left-hand-side">
-        <div id="grid">
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
+        <div class="grid-with-labels">
+            <div id="grid">
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="gridElement">
+                    <button class="btn-play" title="Play / Preview" aria-label="Play album">
+                        <i data-lucide="play"></i>
+                    </button>
+                    <button class="btn-close" title="Remove" aria-label="Remove album">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
             </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
-            <div class="gridElement">
-                <button class="btn-play" title="Play / Preview" aria-label="Play album">
-                    <i data-lucide="play"></i>
-                </button>
-                <button class="btn-close" title="Remove" aria-label="Remove album">
-                    <i data-lucide="x"></i>
-                </button>
+
+            <div id="grid-labels">
+                <div class="grid-label-row">
+                    <span class="label-index">1.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">2.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">3.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">4.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">5.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">6.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">7.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">8.</span>
+                    <p>EEE</p>
+                </div>
+                <div class="grid-label-row">
+                    <span class="label-index">9.</span>
+                    <p>EEE</p>
+                </div>
             </div>
         </div>
 
@@ -158,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const videoButton = document.getElementById('renderVideo');
     videoButton.addEventListener('click', () => {
-        alert('yep... das me');
+        renderVideo();
     }) 
     
     createIcons({ icons });

@@ -246,3 +246,37 @@ img.album {
 .modal-form-side input, .modal-form-side textarea { width: 100%; padding: 8px; margin-top: 4px; }
 .time-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .modal-close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 24px; z-index: 10; }
+
+.grid-with-labels {
+    display: flex;
+    align-items: stretch;
+    margin-right: 20em;
+}
+
+#grid-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* rows align with the 3×3 grid cells */
+}
+
+.grid-label-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.label-index {
+    font-size: 0.75rem;
+    color: #888;
+    min-width: 1.5rem;
+    text-align: right;
+}
+
+.label-input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    font-size: 0.85rem;
+    width: 100%;
+}
